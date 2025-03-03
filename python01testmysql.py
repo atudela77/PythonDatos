@@ -9,9 +9,9 @@ conn = bd.connect(
 )
 
 cursor = conn.cursor()
-sql = "select * from DEPT"
+sql = "select * from EMP"
 cursor.execute(sql)
 for row in cursor:
-    print(row)
+    print(f"Apellido: {row[1]}, Oficio: {row[2]}")
 cursor.close()
 conn.close()
